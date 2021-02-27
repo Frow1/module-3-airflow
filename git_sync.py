@@ -7,7 +7,7 @@ from airflow.utils.dates import days_ago
 default_args = {
     'owner': 'airflow',
     'depends_on_past': False,
-    'start_date': datetime(2021, 2, 27, 12, 31, 0),
+    'start_date': datetime(2021, 2, 27, 9, 42, 0),
     'email': ['airflow@example.com'],
     'email_on_failure': False,
     'email_on_retry': False,

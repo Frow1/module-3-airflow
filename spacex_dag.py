@@ -6,7 +6,7 @@ from datetime import datetime, timedelta
 default_args = {
     "owner": "airflow",
     "depends_on_past": False,
-    "start_date": datetime(2018, 1, 1),
+    "start_date": datetime(2005, 1, 1),
     "email": ["airflow@airflow.com"],
     "email_on_failure": False,
     "email_on_retry": False,
@@ -25,7 +25,7 @@ t1 = BashOperator(
 t2 = BashOperator(
     task_id="print_data", 
     bash_command="cat /var/data/year={{ execution_date.year }}/rocket={{ params.rocket }}/data.csv", 
-    params={"rocket": "all"}, # falcon1/falcon9/falconheavy
+    params={"rocket": "all", "falcon1"}, # falcon1/falcon9/falconheavy
     dag=dag
 )
 

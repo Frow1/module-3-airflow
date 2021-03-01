@@ -32,4 +32,4 @@ for i in ('falcon1', 'falcon9', 'falconheavy', 'all'):
         dag=dag
     )
 
-t1 >> t2
+    t1 >> t2

@@ -27,7 +27,7 @@ for i in ('falcon1', 'falcon9', 'falconheavy', 'all'):
 
     t2 = BashOperator(
         task_id="print_data" + i, 
-        bash_command="cat /var/data/year={{ execution_date.year }}/rocket={{ params.i }}/data.csv", 
+        bash_command="cat /var/data/year={{ execution_date.year }}/i={{ params.i }}/data.csv", 
         params=params,
         dag=dag
     )
